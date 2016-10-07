@@ -4,20 +4,20 @@ use std::fs::File;
 use std::collections::HashMap;
 
 #[derive(Debug)]
-pub struct Post {
+pub struct Page {
     pub contents: HashMap<String, String>,
     pub template: String,
 }
 
-impl Post {
-    pub fn new() -> Post {
-        Post {
+impl Page {
+    pub fn new() -> Page {
+        Page {
             contents: HashMap::new(),
             template: String::new(),
         }
     }
 
-    pub fn content(mut self, path: &str, name: &str) -> Post {
+    pub fn content(mut self, path: &str, name: &str) -> Page {
         let file = File::open(path);
         let file_string = handle_file_string(file, path);
 
@@ -25,7 +25,7 @@ impl Post {
         self
     }
 
-    pub fn template(mut self, path: &str) -> Post {
+    pub fn template(mut self, path: &str) -> Page {
         let file = File::open(path);
         let file_string = handle_file_string(file, path);
 
@@ -33,7 +33,7 @@ impl Post {
         self
     }
 
-    pub fn build(self) -> Post {
+    pub fn build(self) -> Page {
         assert!(!self.template.is_empty(), "You require a template");
         self
     }

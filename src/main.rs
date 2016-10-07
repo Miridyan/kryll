@@ -1,7 +1,7 @@
 extern crate kryll;
 
 use std::env;
-use kryll::post::*;
+use kryll::page::*;
 
 fn main() {
     let mut args: Vec<String> = env::args().collect();
@@ -11,12 +11,12 @@ fn main() {
         println!("{}", arg);
     }
 
-    let test_post_please_ignore = Post::new()
+    let test_page = Page::new()
         .content("html/head.html", "head")
         .content("html/header.html", "header")
         .content("html/footer.html", "footer")
         .template("html/post.html")
         .build();
 
-    println!("{:?}", test_post_please_ignore);
+    println!("{:?}", test_page);
 }
