@@ -7,3 +7,12 @@ authors = ["Miridyan <Michael.R.Ditto@gmail.com>"]
 toml = "0.2.1"
 strfmt = "0.1.5"
 pandoc = "0.4.3"
+
+[lib]
+name = "kryll"
+path = "src/post/lib.rs"
+crate-type = ["rlib"]
+
+[[bin]]
+name = "kryll"
+path = "src/main.rs"
