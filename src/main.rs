@@ -22,7 +22,7 @@ impl Post {
         }
     }
     
-    fn add_content(mut self, path: &str, name: &str) -> Post {
+    fn content(mut self, path: &str, name: &str) -> Post {
         let file = File::open(path);
         let mut file_string = handle_file_string(file, path);
 
@@ -76,10 +76,10 @@ fn main() {
 
 
     let test_post_please_ignore = Post::new()
-        .add_content("html/head.html", "head")
-        .add_content("html/body.html", "body")
-        .add_content("html/header.html", "header")
-        .add_content("html/footer.html", "footer")
+        .content("html/head.html", "head")
+        .content("html/body.html", "body")
+        .content("html/header.html", "header")
+        .content("html/footer.html", "footer")
         .template("html/post.html")
         .build();
 }
