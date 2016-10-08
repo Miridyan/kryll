@@ -17,7 +17,6 @@ fn main() {
         .content("html/footer.html", "footer")
         .finalize("html/post.html");
 
-    println!("{:?}", test_page);
-
-    let test_post = Post::new("bs_path.md", "bs_path.html");
+    let test_post = Post::new("README.md", "test/README.html");
+    test_post.format().unwrap();
 }

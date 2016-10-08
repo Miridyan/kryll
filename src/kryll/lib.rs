@@ -11,6 +11,9 @@ pub use self::page::Page;
 pub mod post;
 pub use self::post::Post;
 
+//pub mod config;
+//pub use self::config::*;
+
 pub fn handle_file_string(file: Result<File, io::Error>, path: &str) -> String {
     let mut file_string = String::new();
 

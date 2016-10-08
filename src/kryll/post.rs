@@ -15,9 +15,6 @@ pub struct Post<'a> {
 
 impl<'a> Post<'a> {
     pub fn new(input: &'a str, output: &'a str) -> Post<'a> {
-        //let file = File::open(path);
-        //let file_string = handle_file_string(file, path);
-        
         Post {
             input: input,
             output: output,
@@ -25,12 +22,6 @@ impl<'a> Post<'a> {
             output_format: OutputFormat::Html5,
         }
     }
-
-//    pub fn format(mut self) -> Post<'a> {
-//        let doc = Pandoc::new()
-//            .set_input_format(self.input_format)
-//            .set_output_format(self.output_format)
-//    }
 
     pub fn set_format_type(mut self, input_fmt: InputFormat, 
                            output_fmt: OutputFormat) -> Post<'a> {
@@ -40,14 +31,15 @@ impl<'a> Post<'a> {
         self
     }
 
-//    pub fn out(&self, path: &str) -> Result<(), io::Error> {
-//        let mut out_file = try!(File::create(path));
-//
-//        try!(out_file.write_all(self.output.as_bytes()));
-//        println!("Successfully wrote to {}.", path);
-//        
-//        Ok(())
-//    }
+    pub fn format(&self) -> Result<(), PandocError> {
+        let mut doc = Pandoc::new();
+
+        doc.add_input(self.input);
+        doc.set_output(self.output);
+        doc.set_input_format(self.input_format.clone());
+        doc.set_output_format(self.output_format.clone());
+        doc.execute()
+    }
 }
 
 impl<'a> fmt::Display for Post<'a> {
