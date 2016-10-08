@@ -1,1 +1,5 @@
+# Build Directories #
 target
+
+# Swap Files #
+*.swp
