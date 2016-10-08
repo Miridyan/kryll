@@ -8,6 +8,9 @@ use std::io::prelude::*;
 pub mod page;
 pub use self::page::Page;
 
+pub mod post;
+pub use self::post::Post;
+
 pub fn handle_file_string(file: Result<File, io::Error>, path: &str) -> String {
     let mut file_string = String::new();
 

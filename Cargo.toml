@@ -10,7 +10,7 @@ pandoc = "0.4.3"
 
 [lib]
 name = "kryll"
-path = "src/post/lib.rs"
+path = "src/kryll/lib.rs"
 crate-type = ["rlib"]
 
 [[bin]]

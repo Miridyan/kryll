@@ -25,16 +25,11 @@ impl Page {
         self
     }
 
-    pub fn template(mut self, path: &str) -> Page {
+    pub fn finalize(mut self, path: &str) -> Page {
         let file = File::open(path);
         let file_string = handle_file_string(file, path);
 
         self.template = file_string;
-        self
-    }
-
-    pub fn build(self) -> Page {
-        assert!(!self.template.is_empty(), "You require a template");
         self
     }
 }
