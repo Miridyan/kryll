@@ -5,8 +5,8 @@ you that you're wrong. The name is in fact a reference to [bashyll](https://gith
 which is itself a reference to Jekyll. I liked the simplicity but decided that I wanted to challenge
 myself and rewrite it in rust for [my own blog](http://mdit.to).
 
-
-Note to github users: this is a mirror of the [real repository](https://gitlab.com/Miridyan/kryll).
+#### Note to github users
+This is a mirror of the [real repository](https://gitlab.com/Miridyan/kryll).
 As of right now, that is the only place I am accepting pull requests and whatnot. I will eventually
 make it so that you can commit to either and the changes will be reflected on both, but I haven't gotten
 to that point yet.
