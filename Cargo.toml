@@ -7,6 +7,7 @@ authors = ["Miridyan <Michael.R.Ditto@gmail.com>"]
 toml = "0.2.1"
 strfmt = "0.1.5"
 pandoc = "0.4.3"
+rustc-serialize = "0.3.19"
 
 [lib]
 name = "kryll"

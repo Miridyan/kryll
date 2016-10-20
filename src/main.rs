@@ -11,12 +11,15 @@ fn main() {
         println!("{}", arg);
     }
 
-    let test_page = Page::new()
-        .content("html/head.html", "head")
-        .content("html/header.html", "header")
-        .content("html/footer.html", "footer")
-        .finalize("html/post.html");
-
-    let test_post = Post::new("README.md", "test/README.html");
-    test_post.format().unwrap();
+//    let test_page = Page::new()
+//        .content("html/head.html", "head")
+//        .content("html/header.html", "header")
+//        .content("html/footer.html", "footer")
+//        .finalize("html/post.html");
+//
+//    let test_post = Post::new("README.md", "test/README.html");
+//    test_post.format().unwrap();
+    
+    let config = Config::new();
+    println!("{:#?}", config);
 }
