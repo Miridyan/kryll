@@ -1,7 +1,6 @@
 use super::*;
 use pandoc::*;
 
-use std::io;
 use std::fmt;
 use std::fs::File;
 

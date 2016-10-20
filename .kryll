@@ -1,0 +1,9 @@
+[site]
+name = "mdit.to"
+template = "template.html"
+author = ["Michael Ditto <Michael.R.Ditto@gmail.com>"]
+
+[directories]
+out = "html"
+source = "posts"
+images = "images"

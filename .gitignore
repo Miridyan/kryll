@@ -1,5 +1,6 @@
 # Build Directories #
 target
 
-# Swap Files #
+# Files #
 *.swp
+*.lock
