@@ -25,8 +25,8 @@ struct DirConfig {
 
 impl Config {
     pub fn new() -> Config {
-        let config_file = File::open("kryll.toml");
-        let config_str = handle_file_string(config_file, "kryll.toml");
+        let config_file = File::open(".kryll");
+        let config_str = handle_file_string(config_file, ".kryll");
         
         let config_decode: Config = decode_str(&config_str).unwrap();
         config_decode
